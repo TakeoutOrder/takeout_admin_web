@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="app">
     <v-container>
       <v-main class="pa-4">
         <v-alert v-if="error_message !== ''" type="error">
