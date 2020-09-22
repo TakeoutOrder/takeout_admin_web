@@ -37,7 +37,7 @@ export default class UserModule extends VuexModule implements UserState {
   }
 
   @Mutation
-  SET_AUTHENTICATED (authenticated: boolean) {
+  private SET_AUTHENTICATED (authenticated: boolean) {
     this.authenticated = authenticated
   }
 
