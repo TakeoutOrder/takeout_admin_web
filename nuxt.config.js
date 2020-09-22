@@ -91,5 +91,11 @@ export default {
 
   axios: {
     baseURL: process.env.BASE_URL
+  },
+
+  vuetify: {
+    theme: {
+      dark: true
+    }
   }
 }

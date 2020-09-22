@@ -7,8 +7,8 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({})
 
 export const actions = {
-  nuxtServerInit: async (_: any, req: any) => {
-    const userRecord = await getUserFromIdToken(req.$cookies.get('access_token'))
+  nuxtServerInit: async (_: any, context: any) => {
+    const userRecord = await getUserFromIdToken(context.$cookies.get('access_token'))
     if (userRecord) {
       UserStore.setUserInfo({
         uid: userRecord.uid,
