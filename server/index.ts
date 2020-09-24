@@ -7,7 +7,7 @@ import DecodedIdToken = admin.auth.DecodedIdToken;
 require('dotenv').config({ path: './.env' })
 
 // initialize firebase-admin when it hasn't been initialized yet.
-if (!admin.auth.length) {
+if (!admin.apps.length) {
   admin.initializeApp({
     // @ts-ignore
     credential: admin.credential.cert(serviceAccountKey)
