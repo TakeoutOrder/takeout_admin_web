@@ -5,11 +5,7 @@ const {
 } = process.env
 
 export default {
-  /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
-  mode: 'universal',
+  ssr: true,
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -54,7 +50,7 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/vuetify',
-    '@nuxtjs/dotenv',
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Nuxt.js modules
@@ -81,21 +77,18 @@ export default {
     MEASUREMENT_ID
   },
 
-  router: {
-    middleware: 'authenticated'
-  },
-
   serverMiddleware: [
     { path: '/server', handler: '~/server/index.ts' }
   ],
 
-  axios: {
+  /*axios: {
     baseURL: process.env.BASE_URL
-  },
+  },*/
 
-  vuetify: {
-    theme: {
-      dark: true
-    }
-  }
+  debug: true
+
+  /*server: {
+    host: '0.0.0.0',
+    port: '3000'
+  }*/
 }

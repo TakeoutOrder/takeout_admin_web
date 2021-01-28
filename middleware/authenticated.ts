@@ -2,7 +2,7 @@ import { Middleware } from '@nuxt/types'
 import { UserStore } from '~/store/user/user'
 
 /**
- * 非ログインの場合, `/login`にリダイレクトさせる.
+ * 非ログインの場合, `/login`にリダイレクトさせる middleware.
  *
  * @param route
  * @param redirect
