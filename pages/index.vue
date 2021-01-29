@@ -23,12 +23,11 @@
 </template>
 
 <script lang="ts">
-export default {
-  data () {
-    return {
-      drawerIsOpen: false
-    }
-  }
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class Index extends Vue {
+  drawerIsOpen = false
 }
 </script>
 
