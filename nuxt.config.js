@@ -57,7 +57,8 @@ export default {
   */
   modules: [
     'cookie-universal-nuxt',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-i18n'
   ],
   /*
   ** Build configuration
@@ -81,14 +82,17 @@ export default {
     { path: '/server', handler: '~/server/index.ts' }
   ],
 
-  /*axios: {
-    baseURL: process.env.BASE_URL
-  },*/
-
-  debug: true
-
-  /*server: {
-    host: '0.0.0.0',
-    port: '3000'
-  }*/
+  i18n: {
+    locales: [
+      { code: 'ja', iso: 'ja-JP', file: 'ja.ts' },
+      { code: 'en', iso: 'en-US', file: 'en.ts' }
+    ],
+    defaultLocale: 'ja',
+    langDir: 'lang/',
+    vueI18n: {
+      fallbackLocale: 'ja'
+    },
+    vueI18nLoader: true,
+    lazy: true
+  }
 }
