@@ -58,7 +58,8 @@ export default {
   modules: [
     'cookie-universal-nuxt',
     '@nuxtjs/axios',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    'vuetify-dialog/nuxt'
   ],
   /*
   ** Build configuration
@@ -93,6 +94,7 @@ export default {
       fallbackLocale: 'ja'
     },
     vueI18nLoader: true,
-    lazy: true
+    lazy: true,
+    vuex: false
   }
 }

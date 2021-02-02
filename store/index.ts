@@ -1,10 +1,9 @@
-import Vuex from 'vuex'
-import Vue from 'vue'
+import { Store } from 'vuex'
 import { getUserFromIdToken } from '~/helper'
-import { UserStore } from '~/store/user/user'
-
-Vue.use(Vuex)
-export const store = new Vuex.Store({})
+import { initialiseStores, UserStore } from '~/utils/store-accessor'
+const initializer = (store: Store<any>) => initialiseStores(store)
+export const plugins = [initializer]
+export * from '~/utils/store-accessor'
 
 export const actions = {
   nuxtServerInit: async (_: any, context: any) => {

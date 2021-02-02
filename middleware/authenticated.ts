@@ -1,5 +1,5 @@
 import { Middleware } from '@nuxt/types'
-import { UserStore } from '~/store/user/user'
+import { UserStore } from '~/store'
 
 /**
  * 非ログインの場合, `/login`にリダイレクトさせる middleware.

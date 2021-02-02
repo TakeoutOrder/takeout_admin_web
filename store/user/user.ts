@@ -1,5 +1,4 @@
-import { Action, getModule, Module, Mutation, VuexModule } from 'vuex-module-decorators'
-import { store } from '~/store'
+import { Module, Mutation, VuexModule } from 'vuex-module-decorators'
 
 interface UserState {
   uid: string
@@ -12,7 +11,7 @@ interface UserParam {
   admin: boolean
 }
 
-@Module({ name: 'user/user', namespaced: true, stateFactory: true, store, dynamic: true })
+@Module({ name: 'user/user', namespaced: true, stateFactory: true })
 export default class UserModule extends VuexModule implements UserState {
   uid = ''
   admin = false
@@ -55,5 +54,3 @@ export default class UserModule extends VuexModule implements UserState {
     this.admin = false
   }
 }
-
-export const UserStore = getModule(UserModule)
